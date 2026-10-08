@@ -25,7 +25,7 @@ export default function Login({ onLogin }) {
     try {
       if (mode === 'register') {
         await register(form);
-        setNotice('Your account is ready. Sign in to view the catalog.');
+        setNotice('Your  account is ready. Sign in to view the catalog.');
         setForm({ username: form.username, email: '', password: '' });
         setMode('login');
       } else {
