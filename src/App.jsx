@@ -25,7 +25,16 @@ export default function App() {
     setUser(null);
   };
 
-  if (checking) return <p className="center">Loading…</p>;
+  if (checking) {
+    return (
+      <main className="loading-screen">
+        <div>
+          <div className="loading-mark" aria-hidden="true">P</div>
+          Restoring your workspace…
+        </div>
+      </main>
+    );
+  }
 
   return user
     ? <ProductList user={user} onLogout={handleLogout} />
